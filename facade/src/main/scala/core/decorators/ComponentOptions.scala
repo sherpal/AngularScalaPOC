@@ -12,4 +12,6 @@ trait ComponentOptions extends js.Object {
 
   val styleUrls: js.UndefOr[js.Array[String]] = js.undefined
 
+  val styles: js.UndefOr[js.Array[String]] = js.undefined
+
 }

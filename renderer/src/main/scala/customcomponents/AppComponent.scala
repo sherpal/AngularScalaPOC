@@ -29,9 +29,15 @@ object AppComponent {
   @JSExportStatic
   val annotations: js.Array[Component] = js.Array(
     new Component(new ComponentOptions {
-      override val selector: String = "app-root"
+      val selector: String = "app-root"
 
-      override val template: js.UndefOr[String] = "<h1>{{ title }}</h1><h2>{{ subtitle() }}</h2>"
+      override val templateUrl: js.UndefOr[String] = "./html/app-component.html"
+
+//      override val template: js.UndefOr[String] =
+//        """
+//          |<h1>{{ title }}</h1>
+//          |<app-heroes></app-heroes>
+//        """.stripMargin
     })
   )
 

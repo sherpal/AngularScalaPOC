@@ -2,7 +2,7 @@
 
 Use [Angular](https://angular.io/) 6 with [Scala](https://www.scala-lang.org/) and [Scala.js](https://www.scala-js.org/).
 
-Currently only the QuickStart guide is implemented.
+The beginning of the "Tour of Heroes" tutorial is implemented.
 
 ## TypeScript decorators
 
@@ -13,11 +13,29 @@ translate them. The way it's supposed to be done is explained
 In Scala.js, that translate to the decorated class having a companion object, that has a val `annotations` that is a
 `js.Array` that contains a Component, or a NgModule...
 
+## Scala.js Angular specificities
+
+### Decorators
+
+[This page](https://v2.angular.io/docs/ts/latest/cookbook/ts-to-js.html) explains how TypeScript decorators have to be
+translated into JavaScript. Essentially, for 
+```typescript
+@SomeDecorator({ ... })
+class Foo {}
+```
+there has to be a JS array `annotations` on the object `Foo`. 
+In Scala, this will be translated by setting a value 
+`annotations: js.Array[Decorator]` to the companion object, and annotate it by `@JSExportStatic`.
+
+### External templates and style sheets
+
+For HTML templates and CSS style sheets that are associated to a component via its decorator, the specified path has to
+be relative to the `index.html` file.
+
 ## Things to do
 
 - Automate source import in index.html
 - Find better way to handle the decorators
-- Check how to handle external template and style URL's
 
 ## To make it run
 

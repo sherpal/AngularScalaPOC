@@ -6,17 +6,19 @@
 
     <!-- The stuff Angular 6 needs -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/tslib/tslib.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/rxjs/bundles/rxjs.umd.js"></script>
     <script src="node_modules/@angular/core/bundles/core.umd.js"></script>
     <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
     <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
-    <script src="node_modules/@angular/forms/bundles/forms.umd.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
-
+    <script src="node_modules/@angular/forms/bundles/forms.umd.js"></script> <!-- has to be after platform-browser! -->
 
     <script src="../renderer/target/scala-2.12/renderer-fastopt.js"></script>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <app-root></app-root>

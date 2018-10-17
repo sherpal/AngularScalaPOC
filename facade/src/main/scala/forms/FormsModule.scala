@@ -12,6 +12,4 @@ class FormsModule extends js.Object
 
 @js.native
 @JSGlobal("ng.forms.FormsModule")
-object FormsModule extends Type[FormsModule] {
-
-}
+object FormsModule extends Type[FormsModule]
