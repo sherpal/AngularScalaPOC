@@ -1,6 +1,6 @@
 package heroeditor
 
-import core.decorators.{Component, ComponentOptions}
+import angular.core.decorators.{Component, ComponentOptions}
 
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr

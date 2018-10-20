@@ -1,7 +1,7 @@
 package customcomponents
 
-import core.OnInit
-import core.decorators.{Component, ComponentOptions}
+import angular.core.OnInit
+import angular.core.decorators.{Component, ComponentOptions}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSExportStatic

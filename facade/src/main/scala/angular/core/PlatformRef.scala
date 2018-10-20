@@ -1,9 +1,9 @@
-package core
+package angular.core
 
 import scala.scalajs.js
 
 /**
-  * https://angular.io/api/core/PlatformRef
+  * https://angular.io/api/angular.core/PlatformRef
   */
 @js.native
 trait PlatformRef extends js.Object {

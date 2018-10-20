@@ -27,6 +27,16 @@ there has to be a JS array `annotations` on the object `Foo`.
 In Scala, this will be translated by setting a value 
 `annotations: js.Array[Decorator]` to the companion object, and annotate it by `@JSExportStatic`.
 
+### Injectables
+
+Injectables must be
+
+- set as providers within the NgModule
+- have their companion object have an `annotations` js-exported static field, which is a `js.Array[Injectable]`
+- be specified in the static js-exported `parameters` of the companion object in which they must be injected
+
+ 
+
 ### External templates and style sheets
 
 For HTML templates and CSS style sheets that are associated to a component via its decorator, the specified path has to

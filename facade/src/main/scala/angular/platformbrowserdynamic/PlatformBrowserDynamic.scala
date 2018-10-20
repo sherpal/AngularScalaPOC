@@ -1,6 +1,6 @@
-package platformbrowserdynamic
+package angular.platformbrowserdynamic
 
-import core.PlatformRef
+import angular.core.PlatformRef
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal

@@ -1,13 +1,13 @@
 package heroeditor
 
-import core.OnInit
-import core.decorators.{Component, ComponentOptions}
+import angular.core.{OnInit, Type}
+import angular.core.decorators.{Component, ComponentOptions}
 
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr
 import scala.scalajs.js.annotation.JSExportStatic
 
-final class HeroesComponent extends OnInit {
+final class HeroesComponent(val heroService: HeroService) extends OnInit {
 
 //  val hero: Hero = new Hero {
 //    val id: Int = 1
@@ -19,12 +19,21 @@ final class HeroesComponent extends OnInit {
   def onSelect(hero: Hero): Unit =
     selectedHero = hero
 
-  val heroes: js.Array[Hero] = MockHeroes.heroes
+  var heroes: js.Array[Hero] = _
+
+  def getHeroes(): Unit = {
+
+    heroService.heroes
+      .subscribe(hs => heroes = hs)
+
+  }
 
 //  val hero: String = "Windstorm"
 
   override def ngOnInit(): Unit = {
     println("Heroes Component")
+
+    getHeroes()
   }
 
 }
@@ -38,8 +47,13 @@ object HeroesComponent {
 
       override val templateUrl: UndefOr[String] = "./html/heroes-component.html"
 
-      override val styles: UndefOr[js.Array[String]] = js.Array[String]()
+      override val styleUrls: UndefOr[js.Array[String]] = js.Array("./css/heroes-component.css")
     })
+  )
+
+  @JSExportStatic
+  val parameters: js.Array[Type[_]] = js.Array(
+    Type.typeOf[HeroService]
   )
 
 

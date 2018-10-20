@@ -1,9 +1,9 @@
-package core
+package angular.core
 
 import scala.scalajs.js
 
 /**
-  * https://angular.io/api/core/NgModuleRef
+  * https://angular.io/api/angular.core/NgModuleRef
   */
 abstract class NgModuleRef[T] extends js.Object {
 

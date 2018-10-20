@@ -1,4 +1,4 @@
-package core
+package angular.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal

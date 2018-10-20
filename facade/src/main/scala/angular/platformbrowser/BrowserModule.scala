@@ -1,6 +1,6 @@
-package platformbrowser
+package angular.platformbrowser
 
-import core.Type
+import angular.core.Type
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal

@@ -1,9 +1,9 @@
-package core
+package angular.core
 
 import scala.scalajs.js
 
 /**
-  * https://angular.io/api/core/NgModuleFactory
+  * https://angular.io/api/angular.core/NgModuleFactory
   */
 abstract class NgModuleFactory[T] extends js.Object {
 

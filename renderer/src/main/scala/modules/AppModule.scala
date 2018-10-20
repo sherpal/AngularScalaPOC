@@ -1,11 +1,11 @@
 package modules
 
-import core.Type
-import core.decorators.{NgModule, NgModuleOptions}
+import angular.core.Type
+import angular.core.decorators.{NgModule, NgModuleOptions}
 import customcomponents.AppComponent
-import forms.FormsModule
-import heroeditor.{HeroDetailComponent, HeroesComponent}
-import platformbrowser.BrowserModule
+import angular.forms.FormsModule
+import heroeditor._
+import angular.platformbrowser.BrowserModule
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSExportStatic
@@ -15,6 +15,8 @@ import scala.scalajs.js.annotation.JSExportStatic
   * The @NgModule Decorator is implemented in the companion object, under annotations static field.
   */
 final class AppModule extends js.Object
+
+import Type.typeOf
 
 
 object AppModule {
@@ -26,14 +28,17 @@ object AppModule {
         BrowserModule, FormsModule
       )
       override val declarations: js.Array[Type[_]] = js.Array(
-        Type.typeOf[AppComponent],
-        Type.typeOf[HeroesComponent],
-        Type.typeOf[HeroDetailComponent]
+        typeOf[AppComponent],
+        typeOf[HeroesComponent],
+        typeOf[HeroDetailComponent],
+        typeOf[MessagesComponent]
       )
       override val bootstrap: js.Array[Type[_]] = js.Array(
         Type.typeOf[AppComponent]
       )
-      override val providers: js.Array[_] = js.Array()
+      override val providers: js.Array[Type[_]] = js.Array(
+        typeOf[HeroService], typeOf[MessageService]
+      )
     })
   )
 

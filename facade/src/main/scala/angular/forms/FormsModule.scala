@@ -1,6 +1,6 @@
-package forms
+package angular.forms
 
-import core.Type
+import angular.core.Type
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal

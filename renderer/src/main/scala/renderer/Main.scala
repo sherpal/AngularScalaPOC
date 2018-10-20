@@ -1,9 +1,9 @@
 package renderer
 
-import core.{AngularCore, Type}
+import angular.core.{AngularCore, Type}
 import modules.AppModule
 import org.scalajs.dom
-import platformbrowserdynamic.PlatformBrowserDynamic
+import angular.platformbrowserdynamic.PlatformBrowserDynamic
 
 object Main {
 
@@ -23,7 +23,6 @@ object Main {
 
       println("Charging App")
       PlatformBrowserDynamic().bootstrapModule(Type.typeOf[AppModule])
-//    PlatformBrowserDynamic().bootstrapModule(js.constructorOf[AppModule].asInstanceOf[Type[AppModule]])
 
     })
 

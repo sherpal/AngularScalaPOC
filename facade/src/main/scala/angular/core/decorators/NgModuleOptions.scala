@@ -1,6 +1,6 @@
-package core.decorators
+package angular.core.decorators
 
-import core.Type
+import angular.core.Type
 
 import scala.scalajs.js
 
@@ -12,6 +12,6 @@ trait NgModuleOptions extends js.Object {
 
   val bootstrap: js.Array[Type[_]]
 
-  val providers: js.Array[_]
+  val providers: js.Array[Type[_]]
 
 }

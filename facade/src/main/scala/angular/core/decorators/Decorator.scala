@@ -1,4 +1,4 @@
-package core.decorators
+package angular.core.decorators
 
 import scala.scalajs.js
 
