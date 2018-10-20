@@ -6,6 +6,4 @@ import scala.scalajs.js.annotation.JSGlobal
 
 @js.native
 @JSGlobal("ng.core.NgModule")
-class NgModule(options: NgModuleOptions) extends Decorator {
-
-}
+final class NgModule(options: NgModuleOptions) extends Decorator

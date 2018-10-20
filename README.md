@@ -44,4 +44,6 @@ line and use the command `npm install`. The required files will be downloaded ba
 `angular-build/package.json` file.
 
 Then use the `fastOptJS` task in [sbt](https://www.scala-sbt.org/). This will generate the `renderer-fastopt.js` file.
-You can now open `angular-build/index.html` in any web browser.
+
+Open a local server in the project directory (for example with [http-server](https://www.npmjs.com/package/http-server))
+and, in a browser, go to `localhost:[port]/angular-build/index.html`, with the port of the server.

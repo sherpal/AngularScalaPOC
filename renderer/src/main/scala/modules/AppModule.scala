@@ -4,7 +4,7 @@ import core.Type
 import core.decorators.{NgModule, NgModuleOptions}
 import customcomponents.AppComponent
 import forms.FormsModule
-import heroeditor.HeroesComponent
+import heroeditor.{HeroDetailComponent, HeroesComponent}
 import platformbrowser.BrowserModule
 
 import scala.scalajs.js
@@ -25,12 +25,13 @@ object AppModule {
       override val imports: js.Array[Type[_]] = js.Array(
         BrowserModule, FormsModule
       )
-      override val declarations: js.Array[_] = js.Array(
-        js.constructorOf[AppComponent],
-        js.constructorOf[HeroesComponent]
+      override val declarations: js.Array[Type[_]] = js.Array(
+        Type.typeOf[AppComponent],
+        Type.typeOf[HeroesComponent],
+        Type.typeOf[HeroDetailComponent]
       )
-      override val bootstrap: js.Array[_] = js.Array(
-        js.constructorOf[AppComponent]
+      override val bootstrap: js.Array[Type[_]] = js.Array(
+        Type.typeOf[AppComponent]
       )
       override val providers: js.Array[_] = js.Array()
     })
