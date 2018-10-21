@@ -4,6 +4,7 @@ import angular.core.OnInit
 import angular.core.decorators.{Component, ComponentOptions}
 
 import scala.scalajs.js
+import scala.scalajs.js.UndefOr
 import scala.scalajs.js.annotation.JSExportStatic
 
 /**
@@ -32,6 +33,8 @@ object AppComponent {
       val selector: String = "app-root"
 
       override val templateUrl: js.UndefOr[String] = "./html/app-component.html"
+
+      override val styleUrls: UndefOr[js.Array[String]] = js.Array("./css/app-component.css")
 
 //      override val template: js.UndefOr[String] =
 //        """

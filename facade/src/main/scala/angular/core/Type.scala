@@ -6,7 +6,7 @@ import scala.scalajs.js
   * This is handled when calling Type.typeOf. It's currently the only way to create Type[T]
   */
 @js.native
-trait Type[T] extends js.Function
+trait Type[+T] extends js.Function
 
 
 object Type {

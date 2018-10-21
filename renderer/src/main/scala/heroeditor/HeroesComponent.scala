@@ -7,17 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.UndefOr
 import scala.scalajs.js.annotation.JSExportStatic
 
-final class HeroesComponent(val heroService: HeroService) extends OnInit {
-
-//  val hero: Hero = new Hero {
-//    val id: Int = 1
-//    val name: String = "Windstorm"
-//  }
-
-  var selectedHero: Hero = _
-
-  def onSelect(hero: Hero): Unit =
-    selectedHero = hero
+final class HeroesComponent(heroService: HeroService) extends OnInit {
 
   var heroes: js.Array[Hero] = _
 
@@ -26,9 +16,9 @@ final class HeroesComponent(val heroService: HeroService) extends OnInit {
     heroService.heroes
       .subscribe(hs => heroes = hs)
 
-  }
+    heroes = MockHeroes.heroes
 
-//  val hero: String = "Windstorm"
+  }
 
   override def ngOnInit(): Unit = {
     println("Heroes Component")
@@ -55,8 +45,6 @@ object HeroesComponent {
   val parameters: js.Array[Type[_]] = js.Array(
     Type.typeOf[HeroService]
   )
-
-
 
 
 }

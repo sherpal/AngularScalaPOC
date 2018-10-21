@@ -14,6 +14,11 @@ final class HeroService(messageService: MessageService) extends js.Object {
     RXJSIndex.of[js.Array[Hero]](MockHeroes.heroes)
   }
 
+  def getHero(id: Int): Hero = {
+    messageService.add(s"HeroService: fetched hero id=$id")
+    MockHeroes.heroes.find(_.id == id).get
+  }
+
 }
 
 
